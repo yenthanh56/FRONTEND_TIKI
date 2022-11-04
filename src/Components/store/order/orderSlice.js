@@ -54,7 +54,7 @@ export const createUserOrder = async (userOrder, dispatch, navigate) => {
 	dispatch(setStatus(STATUS.LOADING));
 	try {
 		const res = await axios.post(
-			"http://localhost:8080/v1/userorder/create",
+			"https://apitiki-myapp.herokuapp.com/v1/userorder/create",
 			userOrder
 		);
 		dispatch(setUserOrder(res.data));
@@ -71,7 +71,9 @@ export const createUserOrder = async (userOrder, dispatch, navigate) => {
 export const getAllUserOrder = async (dispatch) => {
 	dispatch(setStatus(STATUS.LOADING));
 	try {
-		const res = await axios.get(`http://localhost:8080/v1/userorder`);
+		const res = await axios.get(
+			`https://apitiki-myapp.herokuapp.com/v1/userorder`
+		);
 		dispatch(setArrayUserOrdered(res.data));
 		dispatch(setStatus(STATUS.SUCCESS));
 	} catch (error) {
