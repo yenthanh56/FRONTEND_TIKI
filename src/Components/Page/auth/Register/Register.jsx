@@ -1,7 +1,6 @@
 import React, { useState, useRef } from "react";
 import classNames from "classnames/bind";
 import styles from "./Register.module.scss";
-import { toast } from "react-toastify";
 
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
