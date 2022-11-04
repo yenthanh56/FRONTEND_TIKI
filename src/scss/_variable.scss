@@ -1,0 +1,35 @@
+$main-color: rgb(26, 148, 255);
+$black: #000;
+$white: #fff;
+$text-color: #333;
+$text-second-color: #8d8d8d;
+$text-color-white: $white;
+$btn-color-bg: rgb(13, 92, 182);
+
+$box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+$header-height: 8rem;
+$header-shrink-height: 5rem;
+$border-radius: 24px;
+
+$mobile-width: 600px;
+$tablet-width: 1024px;
+
+$font-family: "Montserrat", sans-serif;
+
+// button
+
+$btn-main-bg: $main-color;
+$btn-main-color: $text-color-white;
+
+// color
+
+$colors: (
+	"blue": #4267b2,
+	"orange": #fbb96b,
+	"pink": #fe7e73,
+	"white": #fff,
+	"black": #000,
+	"main": $main-color,
+);
+
+$numbers: (0, 1, 2, 3, 4, 5, 6, 7, 8);

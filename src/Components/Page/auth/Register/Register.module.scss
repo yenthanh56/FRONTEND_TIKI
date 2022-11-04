@@ -1,0 +1,21 @@
+@use "../../../../scss/" as *;
+.form {
+	&__login {
+		&__title {
+			color: #a10035;
+		}
+	}
+	&__close {
+		position: absolute;
+		top: 0;
+		right: 0;
+		font-size: 2rem;
+		width: 30px;
+		height: 30px;
+		background: #ccc;
+		line-height: 30px;
+		text-align: center;
+		border: none;
+		cursor: pointer;
+	}
+}

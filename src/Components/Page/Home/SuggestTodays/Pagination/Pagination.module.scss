@@ -1,0 +1,8 @@
+@use "../../../../../scss/" as *;
+.pagination {
+	@include flex(center, center);
+	flex-direction: column;
+	&__loading {
+		margin: 24px 0;
+	}
+}

@@ -1,25 +1,53 @@
-import logo from './logo.svg';
-import './App.css';
+import { Fragment } from "react";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import className from "classnames/bind";
+import { Routes, Route } from "react-router-dom";
+import styles from "./App.scss";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import "react-toastify/dist/ReactToastify.css";
+import { DefaultLayout } from "./Components/Layout";
+import { publicRouters } from "./Components/Router";
+
+const cx = className.bind(styles);
+const App = () => {
+	return (
+		<div className={cx("app")}>
+			<Routes>
+				{publicRouters.map((route, index) => {
+					const Page = route.component;
+					let Layout = DefaultLayout;
+					if (route.layout) {
+						Layout = route.layout;
+					} else if (route.layout === null) {
+						Layout = Fragment;
+					}
+					return (
+						<Route
+							key={index}
+							path={route.path}
+							element={
+								<Layout>
+									<Page />
+								</Layout>
+							}
+						/>
+					);
+				})}
+			</Routes>
+			<ToastContainer
+				position="top-right"
+				autoClose={5000}
+				hideProgressBar={false}
+				newestOnTop={false}
+				closeOnClick
+				rtl={false}
+				pauseOnFocusLoss
+				draggable
+				pauseOnHover
+			/>
+		</div>
+	);
+};
 
 export default App;

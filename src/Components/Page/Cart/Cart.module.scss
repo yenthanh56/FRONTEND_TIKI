@@ -1,0 +1,103 @@
+@use "../../../scss/" as *;
+
+.cart {
+	position: relative;
+
+	&__iconclose {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 30px;
+		text-align: center;
+		background-color: #ccc;
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}
+.cart__list__title {
+	margin-top: 24px;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(1, 1fr);
+}
+
+.cart__empty {
+	@include flex(center, center);
+	flex-direction: column;
+}
+.cart__imgempty {
+	margin: 30px 0;
+}
+.cart__total {
+	text-align: right;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	margin-top: 32px;
+	&__Link {
+		padding: 12px 34px;
+		background-color: rgb(26, 148, 255);
+		color: #fff;
+		border-radius: 4px;
+		margin-left: 6px;
+		user-select: none;
+	}
+}
+
+// payment
+.payment {
+	margin-top: 32px;
+	h3 {
+		text-align: center;
+	}
+}
+
+.pay__Paymentby {
+	@include flex(center, space-around);
+}
+
+.pay__child {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	input {
+		position: absolute;
+		top: 25px;
+	}
+	img {
+		margin-top: 18px;
+		height: 50px;
+		width: 50px;
+		object-fit: cover;
+		z-index: 1;
+	}
+}
+.pay__choosebank {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	select {
+		min-width: 300px;
+		min-height: 25px;
+		font-size: 16px;
+	}
+}
+
+.pay__username,
+.pay__numberbank {
+	margin-top: 28px;
+	display: flex;
+	justify-content: space-between;
+	input {
+		border: 1px solid;
+		min-width: 300px;
+		min-height: 25px;
+		padding: 5px;
+		font-size: 16px;
+	}
+}
+.pay__username {
+}
+.pay__numberbank {
+}

@@ -1,0 +1,27 @@
+@use "../../../../scss/" as *;
+
+.header__cart {
+	margin-left: 24px;
+	position: relative;
+	&:hover {
+		cursor: pointer;
+	}
+	&__icon {
+		font-size: 2.5rem;
+	}
+	&__badge {
+		color: $black;
+		background-color: rgb(253, 216, 53);
+		position: absolute;
+		top: -9px;
+		height: 20px;
+		line-height: 20px;
+		border-radius: 40px;
+		left: 12px;
+		padding: 0 7px;
+	}
+	span {
+		font-size: 1.2rem;
+		margin-left: 4px;
+	}
+}

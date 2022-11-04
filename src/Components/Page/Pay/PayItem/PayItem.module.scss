@@ -1,0 +1,26 @@
+@use "../../../../scss/" as *;
+.payitem {
+	margin-top: 32px;
+	align-items: center;
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-rows: repeat(1, 1fr);
+	&__title {
+		h4 {
+			white-space: nowrap;
+			max-width: 200px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+	}
+	&__image {
+		width: 50px;
+		object-fit: cover;
+	}
+	&__amount {
+	}
+	&__priceitem {
+	}
+	&__pricetotal {
+	}
+}

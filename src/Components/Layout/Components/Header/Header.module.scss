@@ -1,0 +1,258 @@
+@use "../../../../scss/" as *;
+.header {
+	position: relative;
+	left: 0;
+	top: 0;
+	width: 100%;
+	background-color: $main-color;
+	color: $white;
+	height: 10rem;
+	z-index: 10;
+	.container {
+		width: 1270px;
+		padding-left: 15px;
+		padding-right: 15px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+	&__logo {
+		// @include flex(center, flex-start)
+		display: flex;
+		align-items: flex-start;
+		font-size: 1.3rem;
+		font-weight: 700;
+		flex-basis: 190px;
+		flex-shrink: 0;
+		margin-right: 16px;
+		flex-basis: 190px;
+		flex-shrink: 0;
+
+		img {
+			width: 60px;
+			height: 40px;
+			display: block;
+		}
+	}
+
+	&__menu {
+		@include flex(center, space-between);
+		padding: 15px 0 8px 0;
+	}
+	// search
+	&__mid {
+		@include flex(center, center);
+		position: relative;
+		flex: 1;
+
+		&__list {
+			@include flex(center, center);
+
+			&__item ~ &__item {
+				margin-left: 12px;
+				color: $white;
+
+				&:hover {
+					color: #4267b2;
+				}
+			}
+		}
+		&__search {
+			@include flex(center, center);
+			flex: 1;
+			height: 40px;
+			input {
+				height: 100%;
+				flex: 1;
+				width: 100%;
+				padding: 0px 12px;
+			}
+			input:not(:placeholder-shown) ~ button {
+				color: rgba(22, 24, 35, 0.75);
+			}
+			button {
+				height: 100%;
+				width: 120px;
+				background-color: $btn-color-bg;
+				color: $white;
+				font-weight: 700;
+				border: none;
+				span {
+					margin-left: 8px;
+				}
+			}
+		}
+	}
+
+	// cart
+	&__rigth {
+		@include flex(center, center);
+		// font-size: 2.5rem;
+	}
+	&__account {
+		@include flex(center, center);
+		cursor: pointer;
+		position: relative;
+		&__icon {
+			width: 45px;
+			height: 100%;
+			font-size: 2.5rem;
+			margin-left: 10px;
+			text-align: center;
+		}
+		&__user {
+			&__login {
+				font-size: 1.1rem;
+			}
+			&__register {
+				font-size: 1.2rem;
+				i {
+					margin-left: 8px;
+				}
+			}
+			&__avatar {
+				position: absolute;
+				top: 0px;
+				left: 8px;
+				img {
+					margin-right: 8px;
+					width: 40px;
+					height: 40px;
+				}
+			}
+			&__item {
+				span {
+					margin-right: 4px;
+				}
+			}
+		}
+	}
+
+	&__cart {
+		margin-left: 24px;
+		position: relative;
+
+		&__icon {
+			font-size: 2.5rem;
+		}
+		&__badge {
+			color: $black;
+			background-color: rgb(253, 216, 53);
+			position: absolute;
+			top: -9px;
+			height: 20px;
+			line-height: 20px;
+			border-radius: 40px;
+			left: 12px;
+			padding: 0 7px;
+		}
+		span {
+			font-size: 1.2rem;
+			margin-left: 4px;
+		}
+	}
+
+	&__rigth {
+		li ~ li {
+			margin-left: 12px;
+		}
+	}
+
+	// header bottom
+	&__bottom {
+		position: relative;
+		z-index: 20;
+		padding-bottom: 15px;
+		@include flex(center, space-between);
+		&__title {
+			font-size: 1.3rem;
+			font-weight: 700;
+			font-style: italic;
+			display: flex;
+			align-items: flex-start;
+			flex-basis: 190px;
+			flex-shrink: 0;
+			margin-right: 16px;
+			span {
+				font-size: 1.5rem;
+				font-style: italic;
+				margin-left: 4px;
+				color: rgb(253, 216, 53);
+			}
+		}
+		&__mid {
+			@include flex(center, flex-start);
+			flex: 1;
+			font-size: 1.1rem;
+		}
+
+		&__mybuy {
+			background-color: rgba(255, 255, 255, 0.25);
+			padding: 0 8px;
+			font-size: 1.2rem;
+			border-radius: 24px;
+			height: 22px;
+			line-height: 22px;
+			cursor: pointer;
+			&:hover {
+				color: #4267b2;
+				text-decoration: underline;
+			}
+			&__icon {
+				margin-right: 4px;
+			}
+		}
+	}
+
+	// category
+	&__category {
+		background-color: rgb(255, 255, 255);
+		position: relative;
+		z-index: 1;
+	}
+}
+// Tippy signin , signup
+.box {
+	position: relative;
+	color: $black;
+	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+	width: 265px;
+	padding: 1rem 0;
+	z-index: 30;
+	background-color: $white;
+	top: 5px;
+	left: -60px;
+	&::before {
+		position: absolute;
+		content: "";
+		display: block;
+		border-style: solid;
+		border-width: 15px 11px;
+		border-color: transparent transparent $white transparent;
+		top: -30px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	p {
+		padding: 8px 20px;
+		color: $black;
+		text-align: center;
+		border-bottom: 1px solid #cccccc75;
+		font-weight: 700;
+	}
+	&__item {
+		padding: 8px 20px;
+		font-size: 1.2rem;
+		&:hover {
+			background-color: rgb(245, 244, 245);
+		}
+
+		&__notice {
+			text-align: center;
+			background-color: #c21010;
+			margin-left: 8px;
+			border-radius: 50%;
+			color: $white;
+			padding: 2px 5px;
+		}
+	}
+}

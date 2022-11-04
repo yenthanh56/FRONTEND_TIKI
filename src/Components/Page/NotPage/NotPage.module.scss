@@ -1,0 +1,9 @@
+@use "../../../scss/" as *;
+.page__not {
+	@include flex(center, center);
+	flex-direction: column;
+	margin-top: 24px;
+}
+.page__not__Actions {
+	margin-top: 24px;
+}

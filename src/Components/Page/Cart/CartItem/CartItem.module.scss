@@ -1,0 +1,32 @@
+@use "../../../../scss/" as *;
+
+.cartitem {
+	margin-top: 24px;
+	align-items: center;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(1, 1fr);
+
+	&__title {
+		@include flex(center, unset);
+		&__name {
+			white-space: nowrap;
+			max-width: 230px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+		img {
+			width: 50px;
+			object-fit: cover;
+		}
+		h4 {
+			margin-left: 8px;
+			font-weight: 300;
+		}
+	}
+	&__amount {
+		font-weight: 700;
+	}
+}
+
+// pay

@@ -1,0 +1,38 @@
+@use "../../../scss/" as *;
+
+.backrop {
+	background-image: url("https://images.unsplash.com/32/Mc8kW4x9Q3aRR3RkP5Im_IMG_4417.jpg?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba($color: #000000, $alpha: 0.6);
+	width: 100%;
+	height: 100vh;
+	z-index: 11;
+	// backdrop-filter: blur(3px);
+}
+.modal {
+	position: fixed;
+	top: 20vh;
+	width: 90%;
+	max-width: 40rem;
+	padding: 2rem;
+	background-color: $white;
+	border-radius: 4px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+	z-index: 20;
+	max-height: 500px;
+	overflow: overlay;
+	animation: slide-down 300ms ease-out;
+}
+
+@keyframes slide-down {
+	from {
+		opacity: 0;
+		transform: translateY(-5rem);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}

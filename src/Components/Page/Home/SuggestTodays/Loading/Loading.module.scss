@@ -1,0 +1,20 @@
+@use "../../../../../scss/" as *;
+.spinner-3 {
+	@include flex(center, center);
+	width: 50px;
+	padding: 8px;
+	aspect-ratio: 1;
+	border-radius: 50%;
+	background-color: rgb(26, 148, 255);
+	--_m: conic-gradient(#0000 15%, #fff), linear-gradient(#fff 0 0) content-box;
+	-webkit-mask: var(--_m);
+	mask: var(--_m);
+	-webkit-mask-composite: source-out;
+	mask-composite: subtract;
+	animation: s3 1s infinite linear;
+}
+@keyframes s3 {
+	to {
+		transform: rotate(1turn);
+	}
+}

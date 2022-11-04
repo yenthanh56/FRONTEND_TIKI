@@ -1,0 +1,120 @@
+@use "../../../../scss/" as *;
+
+.container {
+	background-color: $white;
+	width: 1270px;
+	padding-left: 30px;
+	padding-right: 30px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.footer {
+	&__information {
+		display: grid;
+		// grid-template-columns: repeat(5, 1fr);
+
+		grid-template-columns: repeat(5, minmax(256px, 1fr));
+		&__support {
+			h4 {
+				font-size: 1.6rem;
+				line-height: 24px;
+				font-weight: 700;
+				color: rgb(56, 56, 61);
+				margin-bottom: 12px;
+			}
+			p {
+				color: rgb(128, 128, 137);
+				font-size: 1.2rem;
+				margin-bottom: 8px;
+				line-height: 16px;
+				a {
+					color: rgb(56, 56, 61);
+					font-weight: 700;
+				}
+				span {
+					display: block;
+				}
+			}
+		}
+		&__about,
+		&__partner {
+			h4 {
+				font-size: 1.6rem;
+				line-height: 24px;
+				font-weight: 700;
+				color: rgb(56, 56, 61);
+				margin-bottom: 12px;
+			}
+			p {
+				color: rgb(128, 128, 137);
+				font-size: 1.2rem;
+				margin-bottom: 8px;
+				line-height: 16px;
+			}
+		}
+		&__partnerimage,
+		&__methodpay,
+		&__connect {
+			h4 {
+				font-size: 1.6rem;
+				line-height: 24px;
+				font-weight: 700;
+				color: rgb(56, 56, 61);
+				margin-bottom: 12px;
+			}
+		}
+		&__methodpay {
+			&__icon {
+				display: grid;
+				grid-template-columns: repeat(5, 1fr);
+			}
+		}
+		&__connect {
+			&__socialmedia {
+				span {
+					margin-right: 8px;
+				}
+			}
+			&__download {
+				@include flex(unset, unset);
+				img {
+					margin-right: 6px;
+				}
+				&__main {
+					@include flex(unset, space-between);
+					flex-direction: column;
+				}
+			}
+		}
+	}
+}
+
+//address-info
+.address-info {
+	padding: 16px 0;
+	border-top: 1px solid rgb(235, 235, 240);
+	border-bottom: 1px solid rgb(235, 235, 240);
+}
+
+// tiki__about
+.tiki__about {
+}
+
+// tiki__category
+.tiki__category {
+}
+
+.tiki__grid {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	column-gap: 20px;
+}
+
+.tiki__column {
+	@include flex(unset, space-between);
+	flex-direction: column;
+}
+.tiki__column:nth-child(5) {
+	@include flex(unset, unset);
+}

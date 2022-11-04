@@ -1,0 +1,16 @@
+@use "../../../../scss/" as *;
+
+.form-control {
+}
+
+.btn__add {
+	background-color: #fff;
+}
+
+.invalid label {
+	color: #eb1d36;
+}
+.invalid input {
+	border-color: #eb1d36;
+	color: #eb1d36;
+}

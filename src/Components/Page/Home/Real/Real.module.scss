@@ -1,0 +1,69 @@
+@use "../../../../scss/" as *;
+
+.real {
+	background-color: rgb(255, 255, 255);
+	margin: 16px 0px 0px;
+	padding-bottom: 16px;
+
+	&__title {
+		@include flex(center, space-between);
+		padding: 16px;
+		&__left {
+			@include flex(center, center);
+			img {
+				width: 24px;
+				height: 24px;
+				margin-right: 4px;
+				position: relative;
+				top: 2px;
+			}
+			span:nth-child(2) {
+				font-size: 2.2rem;
+			}
+		}
+		&__right {
+			color: rgb(11, 116, 229);
+		}
+	}
+	&__slider {
+		&__item {
+			@include flex(center, space-evenly);
+			padding-bottom: 25px;
+			img {
+				border-radius: 8px;
+				width: 598px;
+				height: 201px;
+				object-fit: cover;
+			}
+		}
+		&__trademark {
+			text-align: center;
+			position: relative;
+			img {
+				border: 1px solid rgb(238, 238, 238);
+				border-radius: 8px;
+				width: 190px;
+				height: 284px;
+				object-fit: cover;
+			}
+			span {
+				color: rgb(26, 148, 255);
+				position: absolute;
+				bottom: 14px;
+				left: 0px;
+				right: 0px;
+				font-size: 1.4rem;
+			}
+		}
+	}
+}
+
+// custom pagination
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+	bottom: -13px;
+	left: 0;
+	width: 100%;
+}

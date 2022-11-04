@@ -1,0 +1,38 @@
+@use "../../../../scss/" as *;
+
+.outstanding {
+	background-color: $white;
+	margin-top: 16px;
+	border-radius: 3px;
+	padding-bottom: 10px;
+	&__title {
+		font-size: 20px;
+		line-height: 28px;
+		padding: 10px 16px;
+		text-transform: capitalize;
+		font-weight: initial;
+	}
+	&__group {
+		display: grid;
+		grid-template-columns: repeat(10, 1fr);
+		grid-template-rows: repeat(1, 1fr);
+		background-color: #fff;
+		margin-top: 18px;
+		gap: 12px 8px;
+		text-align: center;
+		font-size: 1.3rem;
+		&__item {
+			@include flex(center, center);
+			flex-direction: column;
+			img {
+				width: 60px;
+				height: 60px;
+				object-fit: cover;
+				border-radius: 20px;
+			}
+			span {
+				margin-top: 12px;
+			}
+		}
+	}
+}
